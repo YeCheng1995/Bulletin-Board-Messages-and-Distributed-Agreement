@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root>
+    <THMAX tmax="10"/>
+    <BBPORT bp="3456"/>
+    <SYNCPORT sp="3456"/>
+    <BBFILE bbfile="BulletinBoardFile.ims"/>
+    <PEERS peers="peers"/>
+    <DAEMON daemon="d"/>
+    <DEBUG debug="D"/>
+</Root>

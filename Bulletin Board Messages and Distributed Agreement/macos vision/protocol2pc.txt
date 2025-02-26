@@ -1,0 +1,43 @@
+Author: YE CHENG
+System ID 002-31-4970
+
+In the process of data transmission in the program, it needs to be implemented according to certain protocols. These protocols are the basis for ensuring the success of data transmission. The specific protocol content is as follows. Our program transmits data according to strings, so the data needs to be converted into strings and transmitted to the client or server.
+
+When the client links the server, return hi and ask user name
+
+USER name:
+Name string that does not contain characters / can be empty
+
+1.0 HELLO name text:
+Return hi user name when the client logs in successfully
+1.2 ERROR USER text:
+If the input is wrong, eat the input again
+
+READ message-number:
+This command requires a message number message number. If this message exists on the bulletin board, the server returns a message
+2.0 MESSAGE message-number poster/message:
+If there is a message, return message number poster/message
+2.1 UNKNOWN message-number:
+Unknown message number if message number does not exist
+2.2 ERROR READ:
+If the message is a space and does not exist, error read is returned
+
+
+WRITE message:
+This command sends messages to the server for storage. The server stores messages to the bulletin board file
+message-number/poster/message
+3.0 WROTE message-number:
+If it is written successfully, it returns write down + message number(message-number is a unique number assigned by the server)and write the bulletin board file
+3.1 UNKNOWN message-number:
+When an error occurs in the stored procedure, the server returns information
+3.2 ERROR WRITE:
+No information was written to the bulletin board.
+
+
+REPLACE message-number/message:
+This command requires the server to delete the old message number message number and replace the new message (message number remains unchanged)
+3.1 UNKNOWN message-number:
+Unknown message number  if message number does not exist.
+
+QUIT text
+Signal the end of the interaction. After receiving this message, the server returns bye and closes the socket.
